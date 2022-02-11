@@ -27,7 +27,7 @@ public class Freq implements Command {
         try {
             i = java.nio.file.Files.readString(path);
         } catch (java.io.IOException e) {
-            System.out.println(e);
+            System.out.println("unreadable path : " + e);
         }
         String[] words = i.replaceAll("\\p{Punct}", " ").toLowerCase().split("\\s+");
 
